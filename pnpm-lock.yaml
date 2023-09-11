@@ -96,8 +96,8 @@ dependencies:
     specifier: ^0.9.6
     version: 0.9.6(solid-js@1.7.6)
   solid-transition-group:
-    specifier: ^0.0.10
-    version: 0.0.10(solid-js@1.7.6)
+    specifier: ^0.2.0
+    version: 0.2.3(solid-js@1.7.6)
   solid-utils:
     specifier: ^0.8.1
     version: 0.8.1(solid-js@1.7.6)
@@ -1971,6 +1971,15 @@ packages:
       solid-js: 1.7.6
     dev: false
 
+  /@solid-primitives/refs@1.0.5(solid-js@1.7.6):
+    resolution: {integrity: sha512-5hmYmYbm6rs43nMHHozyyUngGA7P7q2WtlaCLJEfmlUJf67GWI1PZmqAiol6m9F37XSMZRuvZLoQ7HA/0q3GYg==}
+    peerDependencies:
+      solid-js: 1.7.6
+    dependencies:
+      '@solid-primitives/utils': 6.2.1(solid-js@1.7.6)
+      solid-js: 1.7.6
+    dev: false
+
   /@solid-primitives/rootless@1.4.0(solid-js@1.7.6):
     resolution: {integrity: sha512-hShkSvajBQKWI0g1oNKfLb3W5owQIhW1wBaMBgq/sAdUhWevyM+ldYab2bry5vnh7DxemLSCrtvFJWNTHCuJgQ==}
     peerDependencies:
@@ -2031,6 +2040,14 @@ packages:
 
   /@solid-primitives/timer@1.3.7(solid-js@1.7.6):
     resolution: {integrity: sha512-zS3qA7WVZYsW7+iTdk2M4W1wpMvRhdcMnO23Tcd+nX3YD7eMvjOnO15Oz2mymyfl/OC2ZgM1L5ec66GayEvPwQ==}
+    peerDependencies:
+      solid-js: 1.7.6
+    dependencies:
+      solid-js: 1.7.6
+    dev: false
+
+  /@solid-primitives/transition-group@1.0.3(solid-js@1.7.6):
+    resolution: {integrity: sha512-TnFADZhx9sibdoW5gxkU1QmLabzV2H2OBKYGS2aR5IC61Q/+7v8wlxOJEevxXNbPiRo6qlE3STLU3L9XS8hDbA==}
     peerDependencies:
       solid-js: 1.7.6
     dependencies:
@@ -6334,11 +6351,14 @@ packages:
       solid-js: 1.7.6
     dev: false
 
-  /solid-transition-group@0.0.10(solid-js@1.7.6):
-    resolution: {integrity: sha512-b3O9z6BUP60CG1WnTdqFuvHms0reDNYwQF+eAEEaSaoDEmiOu9+Lu7zQgWGySJjaAdSAClhmFCmx/eAjQgfIoA==}
+  /solid-transition-group@0.2.3(solid-js@1.7.6):
+    resolution: {integrity: sha512-iB72c9N5Kz9ykRqIXl0lQohOau4t0dhel9kjwFvx81UZJbVwaChMuBuyhiZmK24b8aKEK0w3uFM96ZxzcyZGdg==}
+    engines: {node: '>=18.0.0', pnpm: '>=8.6.0'}
     peerDependencies:
       solid-js: 1.7.6
     dependencies:
+      '@solid-primitives/refs': 1.0.5(solid-js@1.7.6)
+      '@solid-primitives/transition-group': 1.0.3(solid-js@1.7.6)
       solid-js: 1.7.6
     dev: false
 
