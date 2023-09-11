@@ -51,7 +51,7 @@
     "solid-meta": "^0.28.1",
     "solid-repl": "^0.24.0",
     "solid-social": "^0.9.6",
-    "solid-transition-group": "^0.0.10",
+    "solid-transition-group": "^0.2.0",
     "solid-utils": "^0.8.1"
   },
   "devDependencies": {
