@@ -60,8 +60,8 @@ dependencies:
     specifier: ^11.7.0
     version: 11.7.0
   monaco-editor:
-    specifier: 0.33.0
-    version: 0.33.0
+    specifier: 0.47.0
+    version: 0.47.0
   onigasm:
     specifier: ^2.2.5
     version: 2.2.5
@@ -91,7 +91,7 @@ dependencies:
     version: 0.28.1(solid-js@1.7.6)
   solid-repl:
     specifier: ^0.24.0
-    version: 0.24.0(@babel/core@7.21.8)(monaco-editor@0.33.0)
+    version: 0.24.0(@babel/core@7.21.8)(monaco-editor@0.47.0)
   solid-social:
     specifier: ^0.9.6
     version: 0.9.6(solid-js@1.7.6)
@@ -5214,18 +5214,18 @@ packages:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
 
-  /monaco-editor-textmate@3.0.0(monaco-editor@0.33.0)(monaco-textmate@3.0.1):
+  /monaco-editor-textmate@3.0.0(monaco-editor@0.47.0)(monaco-textmate@3.0.1):
     resolution: {integrity: sha512-4BK3ual4WllRpiQBDcBO8NKdbk4ukdBtnl23cRYvu1eNWOWKYOBM0rYac50HvFClSbtd5GMezLPjkaim0iM7sw==}
     peerDependencies:
       monaco-editor: 0.x.x
       monaco-textmate: ^3.0.0
     dependencies:
-      monaco-editor: 0.33.0
+      monaco-editor: 0.47.0
       monaco-textmate: 3.0.1(onigasm@2.2.5)
     dev: false
 
-  /monaco-editor@0.33.0:
-    resolution: {integrity: sha512-VcRWPSLIUEgQJQIE0pVT8FcGBIgFoxz7jtqctE+IiCxWugD0DwgyQBcZBhdSrdMC84eumoqMZsGl2GTreOzwqw==}
+  /monaco-editor@0.47.0:
+    resolution: {integrity: sha512-VabVvHvQ9QmMwXu4du008ZDuyLnHs9j7ThVFsiJoXSOQk18+LF89N4ADzPbFenm0W4V2bGHnFBztIRQTgBfxzw==}
     dev: false
 
   /monaco-textmate@3.0.1(onigasm@2.2.5):
@@ -6299,7 +6299,7 @@ packages:
       solid-js: 1.7.6
     dev: true
 
-  /solid-repl@0.24.0(@babel/core@7.21.8)(monaco-editor@0.33.0):
+  /solid-repl@0.24.0(@babel/core@7.21.8)(monaco-editor@0.47.0):
     resolution: {integrity: sha512-3fmY0vr2vDWPS9+M8CeCZxBCHzjLpr9db1e21RUZkF4RFNlvOenOtx6vTXTJEs2BJZd1z2llpQo9W7Gj/Z9q9A==}
     dependencies:
       '@amoutonbrady/lz-string': 0.0.1
@@ -6310,7 +6310,7 @@ packages:
       babel-preset-solid: 1.4.6(@babel/core@7.21.8)
       dedent: 0.7.0
       jszip: 3.10.1
-      monaco-editor-textmate: 3.0.0(monaco-editor@0.33.0)(monaco-textmate@3.0.1)
+      monaco-editor-textmate: 3.0.0(monaco-editor@0.47.0)(monaco-textmate@3.0.1)
       monaco-textmate: 3.0.1(onigasm@2.2.5)
       onigasm: 2.2.5
       prettier: 2.8.7
@@ -7236,6 +7236,7 @@ packages:
 
   /workbox-google-analytics@6.5.4:
     resolution: {integrity: sha512-8AU1WuaXsD49249Wq0B2zn4a/vvFfHkpcFfqAFHNHwln3jK9QUYmzdkKXGIZl9wyKNP+RRX30vcgcyWMcZ9VAg==}
+    deprecated: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
     dependencies:
       workbox-background-sync: 6.5.4
       workbox-core: 6.5.4
