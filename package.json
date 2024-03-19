@@ -35,7 +35,7 @@
     "@solid.js/docs": "^1.0.52",
     "@solidjs/router": "^0.8.2",
     "@types/shopify-buy": "npm:@brandboostinggmbh/shopify-buy-types@^2.14.6",
-    "babel-preset-solid": "1.6.13",
+    "babel-preset-solid": "1.8.16",
     "fuse.js": "^6.6.2",
     "github-slugger": "^1.5.0",
     "highlight.js": "^11.7.0",

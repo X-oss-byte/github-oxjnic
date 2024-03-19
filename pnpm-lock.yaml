@@ -48,8 +48,8 @@ dependencies:
     specifier: npm:@brandboostinggmbh/shopify-buy-types@^2.14.6
     version: /@brandboostinggmbh/shopify-buy-types@2.14.6
   babel-preset-solid:
-    specifier: 1.6.13
-    version: 1.6.13(@babel/core@7.21.8)
+    specifier: 1.8.16
+    version: 1.8.16(@babel/core@7.21.8)
   fuse.js:
     specifier: ^6.6.2
     version: 6.6.2
@@ -2554,8 +2554,8 @@ packages:
       html-entities: 2.3.2
     dev: false
 
-  /babel-plugin-jsx-dom-expressions@0.35.23(@babel/core@7.21.8):
-    resolution: {integrity: sha512-KaBiZPm2riB5jyRUy5BVaz8TkKcyAx2frePOG2lj5vbYsBpZHIknQkUU/csWr+EeV75h/mRHIOzLo2mX4Dxq3g==}
+  /babel-plugin-jsx-dom-expressions@0.37.19(@babel/core@7.21.8):
+    resolution: {integrity: sha512-nef2eLpWBgFggwrYwN6O3dNKn3RnlX6n4DIamNEAeHwp03kVQUaKUiLaEPnHPJHwxie1KwPelyIY9QikU03vUA==}
     peerDependencies:
       '@babel/core': ^7.20.12
     dependencies:
@@ -2611,13 +2611,13 @@ packages:
       babel-plugin-jsx-dom-expressions: 0.33.14(@babel/core@7.21.8)
     dev: false
 
-  /babel-preset-solid@1.6.13(@babel/core@7.21.8):
-    resolution: {integrity: sha512-W78rLK4xv48k2Jb/VFynu42oCQufcDYFz6gmhMYslKy/PJCfNxdp85QCg1wTcrmCoPQK2TcHMVcL8nVvvTBHxQ==}
+  /babel-preset-solid@1.8.16(@babel/core@7.21.8):
+    resolution: {integrity: sha512-b4HFg/xaKM+H3Tu5iUlZ/43TJOZnhi85xrm3JrXDQ0s4cmtmU37bXXYzb2m55G4QKiFjxLAjvb7sUorPrAMs5w==}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/core': 7.21.8
-      babel-plugin-jsx-dom-expressions: 0.35.23(@babel/core@7.21.8)
+      babel-plugin-jsx-dom-expressions: 0.37.19(@babel/core@7.21.8)
 
   /bail@2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
@@ -7044,7 +7044,7 @@ packages:
       '@babel/core': 7.21.8
       '@babel/preset-typescript': 7.21.5(@babel/core@7.21.8)
       '@types/babel__core': 7.20.0
-      babel-preset-solid: 1.6.13(@babel/core@7.21.8)
+      babel-preset-solid: 1.8.16(@babel/core@7.21.8)
       merge-anything: 5.1.6
       solid-js: 1.7.6
       solid-refresh: 0.5.2(solid-js@1.7.6)
@@ -7236,6 +7236,7 @@ packages:
 
   /workbox-google-analytics@6.5.4:
     resolution: {integrity: sha512-8AU1WuaXsD49249Wq0B2zn4a/vvFfHkpcFfqAFHNHwln3jK9QUYmzdkKXGIZl9wyKNP+RRX30vcgcyWMcZ9VAg==}
+    deprecated: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
     dependencies:
       workbox-background-sync: 6.5.4
       workbox-core: 6.5.4
