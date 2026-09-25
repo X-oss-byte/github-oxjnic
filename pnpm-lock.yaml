@@ -60,8 +60,8 @@ dependencies:
     specifier: ^11.7.0
     version: 11.7.0
   monaco-editor:
-    specifier: 0.33.0
-    version: 0.33.0
+    specifier: 0.57.0
+    version: 0.57.0
   onigasm:
     specifier: ^2.2.5
     version: 2.2.5
@@ -91,7 +91,7 @@ dependencies:
     version: 0.28.1(solid-js@1.7.6)
   solid-repl:
     specifier: ^0.24.0
-    version: 0.24.0(@babel/core@7.21.8)(monaco-editor@0.33.0)
+    version: 0.24.0(@babel/core@7.21.8)(monaco-editor@0.57.0)
   solid-social:
     specifier: ^0.9.6
     version: 0.9.6(solid-js@1.7.6)
@@ -2234,6 +2234,12 @@ packages:
     resolution: {integrity: sha512-NfQ4gyz38SL8sDNrSixxU2Os1a5xcdFxipAFxYEuLUlvU2uDwS4NUpsImcf1//SlWItCVMMLiylsxbmNMToV/g==}
     dev: true
 
+  /@types/trusted-types@2.0.7:
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+    requiresBuild: true
+    dev: false
+    optional: true
+
   /@types/unist@2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
 
@@ -3161,6 +3167,12 @@ packages:
     dependencies:
       domelementtype: 2.3.0
     dev: true
+
+  /dompurify@3.4.15:
+    resolution: {integrity: sha512-EUBjM+B+lkDE41iE82DDSCfkoPGfXx8IxFxPMjNzm/Uk4xDet77rTN9wqlxlVg71kK7XGuUMv6wUxJUwwv+Xyw==}
+    optionalDependencies:
+      '@types/trusted-types': 2.0.7
+    dev: false
 
   /domutils@2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
@@ -4622,6 +4634,12 @@ packages:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
     dev: false
 
+  /marked@14.0.0:
+    resolution: {integrity: sha512-uIj4+faQ+MgHgwUW1l2PsPglZLOLOT1uErt06dAPtx2kjteLAkbsd/0FiYg/MGS+i7ZKLb7w2WClxHkzOOuryQ==}
+    engines: {node: '>= 18'}
+    hasBin: true
+    dev: false
+
   /mdast-util-definitions@5.1.2:
     resolution: {integrity: sha512-8SVPMuHqlPME/z3gqVwWY4zVXn8lqKv/pAhC57FuJ40ImXyBpmO5ukh98zB2v7Blql2FiHjHv9LVztSIqjY+MA==}
     dependencies:
@@ -5214,18 +5232,21 @@ packages:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
 
-  /monaco-editor-textmate@3.0.0(monaco-editor@0.33.0)(monaco-textmate@3.0.1):
+  /monaco-editor-textmate@3.0.0(monaco-editor@0.57.0)(monaco-textmate@3.0.1):
     resolution: {integrity: sha512-4BK3ual4WllRpiQBDcBO8NKdbk4ukdBtnl23cRYvu1eNWOWKYOBM0rYac50HvFClSbtd5GMezLPjkaim0iM7sw==}
     peerDependencies:
       monaco-editor: 0.x.x
       monaco-textmate: ^3.0.0
     dependencies:
-      monaco-editor: 0.33.0
+      monaco-editor: 0.57.0
       monaco-textmate: 3.0.1(onigasm@2.2.5)
     dev: false
 
-  /monaco-editor@0.33.0:
-    resolution: {integrity: sha512-VcRWPSLIUEgQJQIE0pVT8FcGBIgFoxz7jtqctE+IiCxWugD0DwgyQBcZBhdSrdMC84eumoqMZsGl2GTreOzwqw==}
+  /monaco-editor@0.57.0:
+    resolution: {integrity: sha512-5BkI9KGoqrNvBGUe15/QlZq3OooZ8WLg1AxTpaqHRCP3HNpzPPZKE2EDz8M7c+VRmCeUw1Brp4cx/PWm3kI/5A==}
+    dependencies:
+      dompurify: 3.4.15
+      marked: 14.0.0
     dev: false
 
   /monaco-textmate@3.0.1(onigasm@2.2.5):
@@ -6299,7 +6320,7 @@ packages:
       solid-js: 1.7.6
     dev: true
 
-  /solid-repl@0.24.0(@babel/core@7.21.8)(monaco-editor@0.33.0):
+  /solid-repl@0.24.0(@babel/core@7.21.8)(monaco-editor@0.57.0):
     resolution: {integrity: sha512-3fmY0vr2vDWPS9+M8CeCZxBCHzjLpr9db1e21RUZkF4RFNlvOenOtx6vTXTJEs2BJZd1z2llpQo9W7Gj/Z9q9A==}
     dependencies:
       '@amoutonbrady/lz-string': 0.0.1
@@ -6310,7 +6331,7 @@ packages:
       babel-preset-solid: 1.4.6(@babel/core@7.21.8)
       dedent: 0.7.0
       jszip: 3.10.1
-      monaco-editor-textmate: 3.0.0(monaco-editor@0.33.0)(monaco-textmate@3.0.1)
+      monaco-editor-textmate: 3.0.0(monaco-editor@0.57.0)(monaco-textmate@3.0.1)
       monaco-textmate: 3.0.1(onigasm@2.2.5)
       onigasm: 2.2.5
       prettier: 2.8.7
@@ -6375,6 +6396,7 @@ packages:
   /source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
     dependencies:
       whatwg-url: 7.1.0
     dev: true
@@ -7236,6 +7258,7 @@ packages:
 
   /workbox-google-analytics@6.5.4:
     resolution: {integrity: sha512-8AU1WuaXsD49249Wq0B2zn4a/vvFfHkpcFfqAFHNHwln3jK9QUYmzdkKXGIZl9wyKNP+RRX30vcgcyWMcZ9VAg==}
+    deprecated: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
     dependencies:
       workbox-background-sync: 6.5.4
       workbox-core: 6.5.4
